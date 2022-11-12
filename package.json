@@ -1,7 +1,7 @@
 {
   "name": "pedidos",
   "version": "0.0.1",
-  "description": "introduccion a loopback",
+  "description": "Introduccion a loopback",
   "keywords": [
     "loopback-application",
     "loopback"
@@ -40,7 +40,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "Dario0915 <dario.bravosepulveda@gmail.com>",
+  "author": " <aflsrm2@gmail.com>",
   "license": "",
   "files": [
     "README.md",
@@ -49,22 +49,28 @@
     "!*/__tests__"
   ],
   "dependencies": {
-    "@loopback/boot": "^5.0.4",
-    "@loopback/core": "^4.0.4",
-    "@loopback/repository": "^5.0.4",
-    "@loopback/rest": "^12.0.4",
-    "@loopback/rest-explorer": "^5.0.4",
-    "@loopback/service-proxy": "^5.0.4",
+    "@loopback/authentication": "^9.0.4",
+    "@loopback/boot": "^5.0.3",
+    "@loopback/core": "^4.0.3",
+    "@loopback/repository": "^5.0.3",
+    "@loopback/rest": "^12.0.3",
+    "@loopback/rest-explorer": "^5.0.3",
+    "@loopback/security": "^0.8.4",
+    "@loopback/service-proxy": "^5.0.3",
+    "crypto-js": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
     "loopback-connector-mongodb": "^5.6.0",
+    "node-fetch": "^2.6.7",
+    "password-generator": "^2.3.2",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@loopback/build": "^9.0.4",
-    "@loopback/eslint-config": "^13.0.4",
-    "@loopback/testlab": "^5.0.4",
-    "@types/node": "^14.18.32",
-    "eslint": "^8.25.0",
+    "@loopback/build": "^9.0.3",
+    "@loopback/eslint-config": "^13.0.3",
+    "@loopback/testlab": "^5.0.3",
+    "@types/node": "^14.18.26",
+    "eslint": "^8.22.0",
     "source-map-support": "^0.5.21",
-    "typescript": "~4.8.4"
+    "typescript": "~4.7.4"
   }
 }

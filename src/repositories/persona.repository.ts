@@ -1,21 +1,21 @@
 import {inject, Getter} from '@loopback/core';
 import {DefaultCrudRepository, repository, HasManyRepositoryFactory} from '@loopback/repository';
 import {MongodbDataSource} from '../datasources';
-import {Personas, PersonasRelations, Pedido} from '../models';
+import {Persona, PersonaRelations, Pedido} from '../models';
 import {PedidoRepository} from './pedido.repository';
 
-export class PersonasRepository extends DefaultCrudRepository<
-  Personas,
-  typeof Personas.prototype.id,
-  PersonasRelations
+export class PersonaRepository extends DefaultCrudRepository<
+  Persona,
+  typeof Persona.prototype.id,
+  PersonaRelations
 > {
 
-  public readonly pedidos: HasManyRepositoryFactory<Pedido, typeof Personas.prototype.id>;
+  public readonly pedidos: HasManyRepositoryFactory<Pedido, typeof Persona.prototype.id>;
 
   constructor(
     @inject('datasources.mongodb') dataSource: MongodbDataSource, @repository.getter('PedidoRepository') protected pedidoRepositoryGetter: Getter<PedidoRepository>,
   ) {
-    super(Personas, dataSource);
+    super(Persona, dataSource);
     this.pedidos = this.createHasManyRepositoryFactoryFor('pedidos', pedidoRepositoryGetter,);
     this.registerInclusionResolver('pedidos', this.pedidos.inclusionResolver);
   }
